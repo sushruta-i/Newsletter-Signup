@@ -29,11 +29,11 @@ app.post("/", function(req, res) {
 
   const jsonData = JSON.stringify(data); //minify the data
 
-  const url = "https://us18.api.mailchimp.com/3.0/lists/f9b55027e4"; //from mailchimp dev site. the last part is the unique list id
+  const url = "https://usX.api.mailchimp.com/3.0/lists/"; //from mailchimp dev site. the last part is the unique list id
  //the nodejs https.request can take options. the auth needs to be formatted the way mailchimp wants it.
   const options = {
     method: "POST",
-    auth: "sush1:35161bb4ca7efd1409fab173b4e630d5-us18" //this is how mailchimp api needs to be formatted
+    auth: "" //this is how mailchimp api needs to be formatted
   };
 
 
@@ -67,7 +67,3 @@ app.post("/success", function(req,res){
 app.listen(process.env.PORT || 3000, function() {
   console.log("Server is running on port 3000");
 });
-
-
-//apikey: 35161bb4ca7efd1409fab173b4e630d5-us18
-//list id: f9b55027e4
